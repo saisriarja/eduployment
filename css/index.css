@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'NexaBold';
+}
+
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'NexaBold';
+    src: url('fonts/NexaBold.eot');
+    src: url('fonts/NexaBold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/NexaBold.svg#NexaBold') format('svg'),
+         url('fonts/NexaBold.ttf') format('truetype'),
+         url('fonts/NexaBold.woff') format('woff'),
+         url('fonts/NexaBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.font-NexaBold{
+    font-family: 'NexaBold';
+}
