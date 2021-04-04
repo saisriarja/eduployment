@@ -62,6 +62,14 @@ header,
     color: #003c6f;
 }
 
+.banner-section .banner-holder .owl-dots .owl-dot span {
+    background: #109251 !important;
+}
+
+.banner-section .banner-holder .owl-theme .owl-dots .owl-dot:hover span {
+    background: #003c6f !important;
+}
+
 .banner-section .text-container .banner-p {
     color    : #6b6b6b;
     font-size: 20px;
@@ -123,13 +131,27 @@ footer {
     background: #109251;
 }
 
-.form-section .form-input input,
-select {
+.form-section .form-input select,
+.form-input input {
     width     : 100%;
     border    : solid 2px #105632;
     background: #109251;
     color     : #105632 !important;
     height    : 40px;
+}
+
+.radio-form-group .form-check-label input {
+    visibility: hidden;
+}
+
+.radio-form-group .form-check-label.checked:before {
+    content     : 'f00c';
+    z-index     : 9;
+    font-size   : 22px;
+    padding-left: 4px;
+    color       : white;
+    top         : -7px;
+    animation   : zoomincheck 0.5s forwards;
 }
 
 .radio-form-group .form-check-label {
@@ -139,12 +161,12 @@ select {
 }
 
 .radio-form-group .form-check-label .form-check-input {
-    position: relative;
-    margin  : 0;
-}
-
-.radio-form-group .form-check-label input {
-    visibility: hidden;
+    position  : relative;
+    margin    : 0;
+    background: #109251;
+    font-size : 20px;
+    color     : white;
+    border    : none;
 }
 
 .radio-form-group .form-check-label:after {
@@ -168,13 +190,37 @@ select {
     padding-left: 20px;
 }
 
+.click-to-edit {
+    position     : fixed;
+    width        : 50px;
+    height       : 50px;
+    background   : #0d7843;
+    color        : white;
+    right        : 16px;
+    z-index      : 9;
+    top          : 85%;
+    border-radius: 50px;
+}
+.click-to-edit a {
+    text-decoration: none;
+}
+.fa-edit:before, .fa-pencil-square-o:before {
+    content: "\f044";
+}
 @media (min-width:992px) {
     .text-container {
         position: absolute;
         right   : 215px;
         top     : 10px;
     }
+
+    .click-to-edit {
+        right        : 0px;
+        top          : 40px;
+        border-radius: 0px;
+    }
 }
+
 
 .banner-section .text-container .banner-heading {
     color        : #109251;
