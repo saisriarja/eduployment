@@ -1,23 +1,183 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+    margin     : 0;
+    padding    : 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'NexaBold';
+    src        : url('fonts/NexaBold.eot');
+    src        : url('fonts/NexaBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/NexaBold.svg#NexaBold') format('svg'),
+        url('fonts/NexaBold.ttf') format('truetype'),
+        url('fonts/NexaBold.woff') format('woff'),
+        url('fonts/NexaBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style : normal;
+}
+
+.font-NexaBold {
     font-family: 'NexaBold';
 }
 
-*{
-    box-sizing: border-box;
+header,
+.banner-section {
+    background: #d9d9d9;
 }
-@font-face {
-    font-family: 'NexaBold';
-    src: url('fonts/NexaBold.eot');
-    src: url('fonts/NexaBold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/NexaBold.svg#NexaBold') format('svg'),
-         url('fonts/NexaBold.ttf') format('truetype'),
-         url('fonts/NexaBold.woff') format('woff'),
-         url('fonts/NexaBold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+
+.ptb {
+    padding: 75px 0;
 }
-.font-NexaBold{
+
+.navbar-light .navbar-toggler {
+    color       : rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color      : rgba(0, 0, 0, .5);
     font-family: 'NexaBold';
+    font-weight: 800;
+}
+
+.navbar-brand img {
+    max-width: 200px;
+}
+
+.img-text-container {
+    position: relative;
+}
+
+.text-container {
+    position: absolute;
+    right   : 0;
+    top     : 0;
+}
+
+.color-blue {
+    color: #003c6f;
+}
+
+.banner-section .text-container .banner-p {
+    color    : #6b6b6b;
+    font-size: 20px;
+}
+
+.banner-section .text-container button,
+.form-section button {
+    background: #003c6f;
+    color     : #fff;
+    border    : none;
+}
+
+.banner-section .text-container a,
+.form-section a {
+    color      : white;
+    font-weight: 600;
+}
+
+.banner-section .text-container .cb {
+    color: #003c6f !important;
+}
+
+.bg-img-section {
+    padding: 100px 0;
+}
+
+.bg-img-section {
+    background: url(../images/eee-bg.jpg) no-repeat center center / cover;
+    padding   : 150px 0;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.bg-img-section p {
+    font-weight: 500;
+}
+
+.color-gray {
+    color      : #6b6b6b;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.color-green {
+    color: #109251;
+}
+
+.color-blue {
+    color: #003c6f;
+}
+
+.signup-early-section .right-column {
+    padding-top: 150px;
+}
+
+footer {
+    background: #109251;
+}
+
+.form-section .form-input input,
+select {
+    width     : 100%;
+    border    : solid 2px #105632;
+    background: #109251;
+    color     : #105632 !important;
+    height    : 40px;
+}
+
+.radio-form-group .form-check-label {
+    position: relative;
+    cursor  : pointer;
+    color   : #0d7843;
+}
+
+.radio-form-group .form-check-label .form-check-input {
+    position: relative;
+    margin  : 0;
+}
+
+.radio-form-group .form-check-label input {
+    visibility: hidden;
+}
+
+.radio-form-group .form-check-label:after {
+    background: rgba(255, 215, 0, 0);
+    border    : solid 2px #105632;
+}
+
+.radio-form-group .form-check-label:after,
+.radio-form-group .form-check-label.checked:before {
+    content : '';
+    position: absolute;
+    width   : 30px;
+    height  : 30px;
+    top     : -4px;
+    right   : -9px;
+}
+
+.form-check {
+    position    : relative;
+    display     : block;
+    padding-left: 20px;
+}
+
+@media (min-width:992px) {
+    .text-container {
+        position: absolute;
+        right   : 215px;
+        top     : 10px;
+    }
+}
+
+.banner-section .text-container .banner-heading {
+    color        : #109251;
+    border-bottom: solid 7px #003c6f;
+    font-size    : 50px;
 }
