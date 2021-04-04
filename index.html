@@ -52,34 +52,34 @@
                         <div class="col-lg-12 img-text-container d-flex flex-row flex-wrap justify-content-between">
                             <img src="images/slide-01.jpg" class="img-fluid" alt="">
                             <div class="text-container">
-                                <h1 class="banner-heading font-weight-bold">
+                                <h1 class="banner-heading ">
                                     EMPOWERING <br> INDIVIDUALS <br> TO UPLIFT <br>
                                     <span class="color-blue d-inline-block pb-2">THEMSELVES.</span>
                                 </h1>
-                                <p class=" banner-p font-weight-bold">
+                                <p class=" banner-p font-weight-bold d-none d-lg-block">
                                     EduPloyment is a business creating<br> change. Using training and<br> technology, we
                                     enable people to help<br> themselves and provide their loved<br> ones a better life.
                                 </p>
-                                <button class="py-2 px-4"><a href="#">DOWNLOAD THE APP</a></button>
+                                <button class="py-lg-2 px-lg-4 px-3"><a href="#">DOWNLOAD THE APP</a></button>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-lg-12 img-text-container d-flex flex-row flex-wrap justify-content-between">
                             <img src="images/slide-02.jpg" class="img-fluid" alt="">
-                            <div class="text-container">
-                                <h1 class="banner-heading font-weight-bold d-inline-block cb">
-                                    <span class="text-white d-inline-block pb-2">DECENT WORK.</span><br>
+                            <div class="text-container d-flex flex-column d-lg-block">
+                                <h1 class="banner-heading d-inline-block cb ">
+                                    <span class="text-white d-inline-block pb-lg-2">DECENT WORK.</span><br>
                                     SAFE WORKING <br> ENVIRONMENT. <br> FAIR PAY. <br>
 
                                 </h1>
-                                <p class="banner-p font-weight-bold text-white">
+                                <p class="banner-p font-weight-bold text-white d-none d-lg-block">
                                     EduPloyment connects honest job<br> seekers with companies committed to<br>
                                     providing
                                     decent
                                     work.
                                 </p>
-                                <button class="py-2 px-4"><a href="#">DOWNLOAD THE APP</a></button>
+                                <button class="py-lg-2 px-lg-4 px-3"><a href="#">DOWNLOAD THE APP</a></button>
                             </div>
                         </div>
                     </div>
@@ -87,16 +87,16 @@
                         <div class="col-lg-12 img-text-container d-flex flex-row flex-wrap justify-content-between">
                             <img src="images/slide-03.jpg" class="img-fluid" alt="">
                             <div class="text-container">
-                                <h1 class="banner-heading font-weight-bold">
+                                <h1 class="banner-heading fs-15">
                                     LEARN ENGLISH <br> FOR YOUR <br> NEXT JOB. <br>
                                     <span class="color-blue d-inline-block pb-2">AND EVERY JOB <br> AFTER THAT.</span>
                                 </h1>
-                                <p class=" banner-p font-weight-bold">
+                                <p class=" banner-p font-weight-bold d-none d-lg-block">
                                     Begin your journey with a personality <br>assessment and essential English
                                     <br>training,and
                                     increase your chances of<br> success.
                                 </p>
-                                <button class="py-2 px-4"><a href="#">DOWNLOAD THE APP</a></button>
+                                <button class="py-lg-2 px-lg-4 px-3"><a href="#">DOWNLOAD THE APP</a></button>
                             </div>
                         </div>
                     </div>
@@ -142,16 +142,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="col-lg-9 mx-auto px-0 right-column">
+                    <div class="col-lg-9 mx-auto px-0 right-column p-sm-0">
                         <img src="images/sign-up-early.png" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class=" form-section bottom-form-section regular-form-section one-col-section bg-green py-5" id="bottom-form-section">
+    <footer class=" form-section bottom-form-section regular-form-section one-col-section bg-green py-5"
+        id="bottom-form-section">
         <div class="container">
-            <div class="col-lg-12 d-flex flex-wrap flex-row justify-content-start">
+            <div class="col-lg-12 d-flex flex-wrap flex-row justify-content-start p-0">
                 <div class="col-lg-12 p-0">
                     <span class="text-white py-3 px-4 toggle-form"><i class="fa fa-times font-16 font-lg-26"></i>
                         <div class="clearfix"></div>
@@ -218,7 +219,8 @@
         <div class="click-to-edit">
             <a href="#bottom-form-section"
                 class="toggle-form text-white font-24 font-lg-30 h-100 d-block d-flex align-items-center justify-content-center"><i
-                    class="fa fa-edit"></i></a>
+                    class="fa fa-edit "></i>
+            </a>
         </div>
     </section>
     <script>
@@ -246,6 +248,25 @@
             $('.radio-form-group').click(function () {
                 $('.form-check-label.checked:before').html('<i class="fa fa-check"></i>')
             })
+            $('input[name="genderOption"]').on('change', function () {
+                if ($(this).prop('checked')) {
+                    $('.form-check-label').removeClass('checked');
+                    $(this).closest('.form-check-label').addClass('checked');
+                }
+            });
+            $('.toggle-form').on('click', function (event) {
+                if ($(window).width() > 992) {
+                    event.preventDefault();
+
+                    $('.bottom-form-section').toggleClass('regular-form-section sticky-form-section');
+                    if ($('.bottom-form-section').hasClass('sticky-form-section')) {
+                        $('body').addClass('sticky-form-has-opened');
+                    } else {
+                        $('body').removeClass('sticky-form-has-opened');
+                    }
+                    $('.form-layout .form-group').parent().toggleClass('col-lg-6 col-lg-12');
+                }
+            });
         });
     </script>
 </body>
