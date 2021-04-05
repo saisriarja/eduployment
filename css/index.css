@@ -320,6 +320,7 @@ body.sticky-form-has-opened:before {
 
 .radio-form-group .form-check-label.checked:before {
     content     : '\f00c';
+    font-family: FontAwesome;
     z-index     : 9;
     font-size   : 22px;
     padding-left: 4px;
